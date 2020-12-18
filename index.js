@@ -21,8 +21,14 @@ inquirer
 
         {
             type: 'input',
+            message: 'What does a user need to know for installation?',
+            name: 'installation',
+        },
+
+        {
+            type: 'input',
             message: 'What license does this include?',
-            name: 'License',
+            name: 'license',
         },
 
         {
@@ -42,8 +48,13 @@ inquirer
         },
         {
             type: 'input',
-            message: 'Please enter your contact information',
-            name: 'contact',
+            message: 'Please enter your email address',
+            name: 'email',
+        },
+        {
+            type: 'input',
+            message: 'Please enter your github username',
+            name: 'github',
         },
 
 
@@ -51,30 +62,40 @@ inquirer
 
     .then((data) => 
     fs.writeFile('GeneratedREADME.md', (`
-    \n # Project Title: 
-    ${data.name}
+    \n # Project Title: ${data.name}
+    
     \n ## Table of Contents:
-   
+    * [Description](##Description)
+    * [License](##License)
+    * [User Need to Know](##Users)
+    * [Contribute](##Contribute)
+    * [Partners](#Partners)
+    * [Contact](#Contact)
+
     \n ## Description: 
     ${data.description} 
 
-    \n ## What license is used?:
+    \n ## License:
     ${data.license}
 
     \n ## Motivation: 
-    ${data.motivation} 
+    ${data.motivation}
+
+    \n ## Installation
+    ${data.installation}
    
-    \n ## What do users need to know?: 
+    \n ## Users: 
     ${data.needtoknow}
     
-    \n ## What do contributors need to know?: 
+    \n ## Contribute: 
     ${data.contribute}
    
-    \n ## Contributors: 
+    \n ## Partners: 
     ${data.partners} 
    
-    \n ## Contact Info: 
-    ${data.contact} 
+    \n ## Contact:
+    ${data.email}
+    ${data.github}
     `),
     
     (err) =>

@@ -11,13 +11,20 @@ inquirer
         {
             type: 'input',
             message: 'Please describe your project.',
-            name: 'describtion',
+            name: 'description',
         },
         {
             type: 'input',
             message: 'What was the motivation behind creating this repo?',
             name: 'motivation',
         },
+
+        {
+            type: 'input',
+            message: 'What license does this include?',
+            name: 'License',
+        },
+
         {
             type: 'input',
             message: 'What does the user need to know about the repo?',
@@ -43,12 +50,30 @@ inquirer
     ])
 
     .then((data) => 
-    fs.writeFile('README.md', (`${data.name}
-    ${data.describtion} 
+    fs.writeFile('GeneratedREADME.md', (`
+    \n # Project Title: 
+    ${data.name}
+    \n ## Table of Contents:
+   
+    \n ## Description: 
+    ${data.description} 
+
+    \n ## What license is used?:
+    ${data.license}
+
+    \n ## Motivation: 
     ${data.motivation} 
+   
+    \n ## What do users need to know?: 
     ${data.needtoknow}
+    
+    \n ## What do contributors need to know?: 
     ${data.contribute}
+   
+    \n ## Contributors: 
     ${data.partners} 
+   
+    \n ## Contact Info: 
     ${data.contact} 
     `),
     

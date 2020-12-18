@@ -30,12 +30,6 @@ inquirer
             message: 'What license does this include?',
             name: 'license',
         },
-
-        {
-            type: 'input',
-            message: 'What does the user need to know about the repo?',
-            name: 'needtoknow',
-        },
         {
             type: 'input',
             message: 'What does the user need to know about contributing to the rep?',
@@ -67,7 +61,8 @@ inquirer
     \n ## Table of Contents:
     * [Description](##Description)
     * [License](##License)
-    * [User Need to Know](##Users)
+    * [Motivation](##Motivation)
+    * [Installation](##Installation)
     * [Contribute](##Contribute)
     * [Partners](#Partners)
     * [Contact](#Contact)
@@ -84,9 +79,6 @@ inquirer
     \n ## Installation
     ${data.installation}
    
-    \n ## Users: 
-    ${data.needtoknow}
-    
     \n ## Contribute: 
     ${data.contribute}
    

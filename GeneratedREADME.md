@@ -1,45 +1,43 @@
 
     
- # Project Title: Test
+ # Project Title: Readme Generator
     
     
  ## Table of Contents:
     * [Description](##Description)
     * [License](##License)
-    * [User Need to Know](##Users)
+    * [Motivation](##Motivation)
+    * [Installation](##Installation)
     * [Contribute](##Contribute)
     * [Partners](#Partners)
     * [Contact](#Contact)
 
     
  ## Description: 
-    Test 
+    This was designed to automatically create a Readme based on user input 
 
     
  ## License:
-    Test
+    N/A
 
     
  ## Motivation: 
-    Test
+    To make an easy and useful application for the user
 
     
  ## Installation
-    Test
+    You will need npm Inquirer for this to work
    
     
- ## Users: 
-    Test
-    
-    
  ## Contribute: 
-    Test
+    Please feel free to contribute if you'd like
    
     
  ## Partners: 
-    Test 
+    N/A 
    
     
- ## Contactnode: 
-    Test 
+ ## Contact:
+    Ljmart02@gmail.com
+    LukeMartin-123
     
